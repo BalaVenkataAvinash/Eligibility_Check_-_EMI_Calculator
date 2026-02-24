@@ -3,7 +3,7 @@ app/models/kyc_pan.py
 app/models/user_profile.py
 app/repositories/user_repository.py
 app/routers/user_profile_route.py
-app/schemas/user_profile_schema.py
+app/schemas/user_profile_sch.py
 app/services/user_profile_service.py
 app/dummy_pan_data.py
 __pycache__/
