@@ -54,10 +54,6 @@ def check_loan_eligibility(
                 "current_score": eligibility.credit_score_used,
                 "bureau":        eligibility.bureau_name,
             },
-            "credit_score_tiers": [
-                {"min_score": score, "max_loan_amount": amount}
-                for score, amount in CREDIT_SCORE_TIERS
-            ],
             "Message": "Unfortunately, you are not eligible for a loan based on your current credit score. Please review the credit score tiers and consider improving your credit profile to become eligible in the future.",
         }
     approved_amount = float(eligibility.max_eligible_amount or 0)
@@ -73,7 +69,6 @@ def check_loan_eligibility(
         },
         "credit_summary": {
             "current_score":  eligibility.credit_score_used,
-            "previous_score": eligibility.previous_credit_score_used,
             "bureau":         eligibility.bureau_name,
         },
         "Message": "Congratulations! You are eligible for a loan. Please proceed to calculate your EMI based on your approved amount and preferred tenure.",
